@@ -1,0 +1,65 @@
+.home{
+    background:linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url('../../../assets/OIP.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: -10;
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    min-height: 100vh;
+}
+.card{
+    margin:70px;
+    box-shadow: 0px 0px 10px cyan;
+    height: 350px;
+    /* transition: .5s; */
+}
+/* .card:hover{
+    transform: scale(1.05);
+} */
+.img{
+    height: 120px;
+    width: 150px;
+    display: block;
+    margin: auto;
+    
+    /* filter: drop-shadow(10px 10px 5px yellow); */
+}
+
+.card-body{
+    background: #152238;
+    color: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.card-title{
+    text-transform: uppercase;
+    /* color:#dc3545; */
+    color: cyan;
+    /* color: greenyellow; */
+}
+.card-text{
+    /* text-align:justify; */
+    font-size: 12px;
+    line-height: 15px;
+    /* color: #ffc107; */
+}
+.card-link{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+.card-link:hover{
+    color: #152238;
+}
+.btn{
+    background:transparent;
+    box-shadow: 0px 0px 5px cyan;
+    border:2px solid cyan;
+}
+.btn:hover{
+    background: cyan; 
+    box-shadow: 0px 0px 5px cyan;
+}

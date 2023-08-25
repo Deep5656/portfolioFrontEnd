@@ -1,0 +1,14 @@
+
+<div class="home">
+    <div class="card" style="width: 250px;" *ngFor="let p of project">
+        <img class="card-img-top img" src="assets/administrator.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{p.title}}</h5>
+          <p class="card-text">{{p.description}}</p>
+          <button class="btn btn-sm"><a href={{p.link}} target="_blank" class="card-link">Visit</a></button>
+          
+        </div>
+       
+        
+      </div>
+</div>

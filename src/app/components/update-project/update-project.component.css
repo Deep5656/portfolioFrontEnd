@@ -1,0 +1,41 @@
+.home{
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    height: 100vh;
+    background:linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url('../../../assets/OIP.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 90px 10% 0;
+   
+}
+
+.form{
+    width: 80%;
+    margin: auto;
+    margin-top: 10px;
+    background:white;
+    color: black;
+    border-radius: 10px;
+    padding: 20px;
+}
+.label{
+    color:black;
+    margin-left: 10px;
+}
+.forminput{
+    margin: 5px;
+    padding: 0px;
+
+}
+.input{
+    
+    color:black
+}
+.btn{
+    width: 99%;
+    margin: 5px;
+}

@@ -1,0 +1,19 @@
+<!-- <p>admin-panel-dashboard works!</p> -->
+
+<div class="home">
+    <div class="card" style="width: 250px;" *ngFor="let p of project">
+        <img class="card-img-top img" src="assets/administrator.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{p.title}}</h5>
+          <p class="card-text">{{p.description}}</p>
+          <a href={{p.link}} class="card-link">{{p.link}}</a>
+          <div class="container text-center">
+            <button class="btn btn-sm btn-danger" (click)="delete(p.id)">Delete</button>
+            <button class="btn btn-sm btn-warning"><a class="link"  [routerLink]="'/update-project/'+p.id">Update</a></button>
+          </div>
+        </div>
+        
+      </div>
+</div>
+
+<!-- <router-outlet></router-outlet> -->

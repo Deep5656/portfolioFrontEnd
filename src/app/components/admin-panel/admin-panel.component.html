@@ -1,0 +1,42 @@
+<div class="home">
+    <div>
+        <form class="form" (ngSubmit)="addProject()">
+            <h5 class="text-center">Add New Project</h5>
+            <div class="form-group forminput">
+                <label class="label">Image</label>
+                <input type="text" class="form-control input" placeholder="Enter Image URL" name="image"
+                    [(ngModel)]="project.image" required>
+            </div>
+            <div class="form-group forminput">
+                <label class="label">Title</label>
+                <input type="text" class="form-control input" placeholder="Title of Your Project" name="title"
+                    [(ngModel)]="project.title" required>
+            </div>
+            <div class="form-group forminput">
+                <label class="label">Description</label>
+                <textarea class="form-control input" name="" id="" cols="10" rows="5"
+                    placeholder="Describe Your Project Here ..." name="description" [(ngModel)]="project.description"
+                    required></textarea>
+            </div>
+            <div class="form-group forminput">
+                <label class="label">Link</label>
+                <input type="text" class="form-control input" id="exampleInputPassword1"
+                    placeholder="Link of Your Project" name="link" [(ngModel)]="project.link" required>
+            </div>
+            <button type="submit" class="btn btn-warning">Add Project</button>
+        </form>
+    </div>
+
+    <div>
+        <div class="card">
+            <img class="card-img-top img" src="assets/administrator.png" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Setting</h5>
+                <p class="card-text" style="color:red">modify your dashborad here !!</p>
+                <a href="admin-panel-dash" [routerLink]="'admin-panel-dash'" class="card-link">Manage DashBoard</a>
+            </div>
+    
+        </div>
+    </div>
+    
+</div>

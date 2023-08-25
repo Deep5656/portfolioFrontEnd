@@ -1,0 +1,30 @@
+<p>update-project works!</p>
+
+<div class="home">
+
+    <form class="form" (ngSubmit)="updateProject()">
+        <h5 class="text-center">Update Details</h5>
+        <div class="form-group forminput">
+            <label class="label">Image</label>
+            <input type="text" class="form-control input" placeholder="Enter Image URL" name="image"
+                [(ngModel)]="project.image">
+        </div>
+        <div class="form-group forminput">
+            <label class="label">Title</label>
+            <input type="text" class="form-control input" placeholder="Title of Your Project" name="title"
+                [(ngModel)]="project.title">
+        </div>
+        <div class="form-group forminput">
+            <label class="label">Description</label>
+            <textarea class="form-control input" name="" id="" cols="10" rows="5"
+                placeholder="Describe Your Project Here ..." name="description" [(ngModel)]="project.description"></textarea>
+        </div>
+        <div class="form-group forminput">
+            <label class="label">Link</label>
+            <input type="text" class="form-control input" id="exampleInputPassword1"
+                placeholder="Link of Your Project" name="link" [(ngModel)]="project.link">
+        </div>
+        <button type="submit" class="btn btn-warning">Update Project</button>
+    </form>
+
+</div>
