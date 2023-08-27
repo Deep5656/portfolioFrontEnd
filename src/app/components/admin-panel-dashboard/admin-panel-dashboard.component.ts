@@ -1,5 +1,6 @@
 import { Component,OnInit } from '@angular/core';
 import { ProjectService } from 'src/app/services/project.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-admin-panel-dashboard',
@@ -28,23 +29,57 @@ export class AdminPanelDashboardComponent implements OnInit {
 
   //delete project
   delete(id:any){
-    console.log('clicked');
+    Swal.fire({
+      icon: 'warning',
+      title: 'are you sure ?',
+      confirmButtonText: 'Delete',
+      showCancelButton: true,
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this._service.deleteProject(id).subscribe((data:any)=>{
+          console.log(data);
+          // Remove the project from the array
+          const index = this.project.findIndex((item: { id: any; }) => item.id === id);
+          this.project.splice(index, 1);
+          
+         },(error:any)=>{
+          console.log(error);
+          
+         })
+      }
+    });
+    // console.log('clicked');
     
-     this._service.deleteProject(id).subscribe((data:any)=>{
-      console.log(data);
-      // Remove the project from the array
-      const index = this.project.findIndex((item: { id: any; }) => item.id === id);
-      this.project.splice(index, 1);
+    //  this._service.deleteProject(id).subscribe((data:any)=>{
+    //   console.log(data);
+    //   // Remove the project from the array
+    //   const index = this.project.findIndex((item: { id: any; }) => item.id === id);
+    //   this.project.splice(index, 1);
       
-     },(error:any)=>{
-      console.log(error);
+    //  },(error:any)=>{
+    //   console.log(error);
       
-     })
+    //  })
   }
 
-  //update project
-  update(){
-    
-  }
+  // deleteCategory(cid: any) {
+
+  //   Swal.fire({
+  //     icon: 'warning',
+  //     title: 'are you sure ?',
+  //     confirmButtonText: 'Delete',
+  //     showCancelButton: true,
+  //   }).then((result) => {
+  //     if (result.isConfirmed) {
+  //       this._category.deleteCategory(cid).subscribe(
+  //         (data: any) => {
+  //         this.categories=this.categories.filter((category) => category.cid != cid)
+  //         Swal.fire("Success", "Category Deleted", "success");
+  //       }, (error) => {
+  //         Swal.fire("Error", "First Delete Quizzes of this category", "error");
+  //       })
+  //     }
+  //   });
+  // }
 
 }
