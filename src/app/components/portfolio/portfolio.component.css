@@ -13,7 +13,7 @@
 .card{
     margin:70px;
     box-shadow: 0px 0px 10px cyan;
-    height: 350px;
+    min-height: 400px;
     /* transition: .5s; */
 }
 /* .card:hover{
