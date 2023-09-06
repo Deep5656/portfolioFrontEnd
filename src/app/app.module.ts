@@ -18,6 +18,7 @@ import { AdminDashboardComponent } from './components/admin-dashboard/admin-dash
 import { UpdateProjectComponent } from './components/update-project/update-project.component';
 // import { UpdateDashComponent } from './components/update-dash/update-dash.component';
 import {LocationStrategy, HashLocationStrategy} from '@angular/common';
+import { ErrorComponent } from './components/error/error.component';
 
 
 
@@ -34,6 +35,7 @@ import {LocationStrategy, HashLocationStrategy} from '@angular/common';
     AdminPanelDashboardComponent,
     AdminDashboardComponent,
     UpdateProjectComponent,
+    ErrorComponent,
     // UpdateDashComponent
   ],
   imports: [

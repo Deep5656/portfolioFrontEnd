@@ -9,7 +9,7 @@ import { AdminPanelComponent } from './components/admin-panel/admin-panel.compon
 import { AdminPanelDashboardComponent } from './components/admin-panel-dashboard/admin-panel-dashboard.component';
 import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
 import { UpdateProjectComponent } from './components/update-project/update-project.component';
-// import { UpdateDashComponent } from './components/update-dash/update-dash.component';
+import { ErrorComponent } from './components/error/error.component';
 
 const routes: Routes = [
   {
@@ -58,6 +58,11 @@ const routes: Routes = [
   {
     path:'update-project/:id',
     component:UpdateProjectComponent,
+    pathMatch:'full'
+  },
+  {
+    path:'**',
+    component:ErrorComponent,
     pathMatch:'full'
   }
  
