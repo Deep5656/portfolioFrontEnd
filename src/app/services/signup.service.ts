@@ -10,7 +10,7 @@ export class SignupService {
 
   // validate signin
   public validateUser(user:any){
-    return this._http.post(`https://portfoliosignup-production.up.railway.app/user/validate`,user);
+    return this._http.post(`http://localhost:8181/user/validate`,user);
   }
 
 

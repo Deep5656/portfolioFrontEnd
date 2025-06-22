@@ -1,0 +1,24 @@
+<!-- {{this.data}} -->
+
+<!-- <div #dialogContainer></div> -->
+
+   
+      <div class="card">
+          <button style="float: right;" (click)="close()">close</button>
+          <img class="card-img-top img" src="./assets/administrator.png" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{data.title}}</h5>
+            <p class="card-text">
+              {{ data.description }}
+            </p>
+            <button class="btn btn-sm"><a href={{data.link}} target="_blank" class="card-link">Visit</a></button>
+          </div>
+        </div>
+        <div class="no-records" *ngIf="data.length == 0">
+          <p >No project found</p>
+        </div>
+       
+  
+      
+
+  

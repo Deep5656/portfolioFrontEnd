@@ -1,14 +1,28 @@
 
 <div class="home">
-    <div class="card" style="width: 250px;" *ngFor="let p of project">
+  <div #dialogContainer></div>
+    <div class="card" style="width: 300px;" *ngFor="let p of project">
         <img class="card-img-top img" src="./assets/administrator.png" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">{{p.title}}</h5>
-          <p class="card-text">{{p.description}}</p>
+          <p class="card-text">
+            {{ p.description | turncate:200}}
+            <span *ngIf="p.description.length > 50" class="showMore" (click)="showMore(p)">show more</span>
+          </p>
           <button class="btn btn-sm"><a href={{p.link}} target="_blank" class="card-link">Visit</a></button>
-          
         </div>
-       
-        
       </div>
+      <div class="no-records" *ngIf="project.length == 0">
+        <p >No project found</p>
+      </div>
+      <div class="loader" *ngIf="isLoading">
+        <div class="spinner-border" role="status">
+          <!-- <span class="sr-only">Loading...</span> -->
+        </div>
+      </div>
+
+    
 </div>
+
+
+

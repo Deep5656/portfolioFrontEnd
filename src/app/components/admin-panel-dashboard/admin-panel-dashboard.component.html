@@ -1,7 +1,8 @@
 <!-- <p>admin-panel-dashboard works!</p> -->
 
 <div class="home">
-    <div class="card" style="width: 250px;" *ngFor="let p of project">
+    <div class="card" style="width: 300px;" *ngFor="let p of project">
+      <!-- {{project | json}} -->
         <img class="card-img-top img" src="assets/administrator.png" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">{{p.title}}</h5>
@@ -12,8 +13,12 @@
             <button class="btn btn-sm btn-warning"><a class="link"  [routerLink]="'/update-project/'+p.id">Update</a></button>
           </div>
         </div>
-        
       </div>
+      <div class="no-records" *ngIf="project.length == 0">
+        <p >No project found</p>
+      </div>
+      
 </div>
+
 
 <!-- <router-outlet></router-outlet> -->

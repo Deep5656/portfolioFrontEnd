@@ -1,12 +1,10 @@
-
-
 <section class="home">
     <div class="home-content">
         <div class="text-content">
             <h3>Hello, It's Me</h3>
             <h1>Deepanshu Katiyar</h1>
             <h3>And I'm a <span class="text"></span> </h3>
-            <p>I am a web designer with over a year of experience in creating and designing websites.
+            <p>I am a web designer with over Two year of experience in creating and designing websites.
                 <br> front-end development, Back-end development and many more ...
             </p>
         </div>
@@ -16,7 +14,8 @@
         </div>
         <div class="home-sci">
             <a href="https://www.instagram.com/deepanshu_katiyar_/" target="_blank"><i class='bx bxl-instagram'></i></a>
-            <a href="https://auth.geeksforgeeks.org/user/_network_/practice" target="_blank"><i class='bx bx-code-alt'></i></a>
+            <a href="https://auth.geeksforgeeks.org/user/_network_/practice" target="_blank"><i
+                    class='bx bx-code-alt'></i></a>
             <a href="https://www.linkedin.com/in/deepanshu-katiyar/" target="_blank"><i class='bx bxl-linkedin'></i></a>
             <a href="https://github.com/Deep5656" target="_blank"><i class='bx bxl-github'></i></a>
         </div>
@@ -25,3 +24,51 @@
     </div>
 </section>
 
+
+
+
+<div class="home">
+    <div>
+        <h1 style="color:white">Special Works</h1>
+    </div>
+
+    <div class="container">
+        <form (ngSubmit)="generateCode()" class="form-grid">
+
+            <div class="left-column">
+                <label style="color:white">Enter Keys (comma-separated):</label>
+                <textarea placeholder="Keys..." [(ngModel)]="keysInput" name="keysInput" rows="1"
+                    class="auto-grow-textarea" (input)="autoResize($event)" required></textarea>
+
+
+                <label style="color:white">Response Object:</label>
+                <input placeholder="Response Object..." type="text" [(ngModel)]="responseObj" name="responseObj"
+                    required />
+
+                <button type="submit">Generate Code</button>
+            </div>
+
+            <div class="right-column">
+                <label style="color: white;">Paste JSON:</label>
+                <textarea placeholder="Paste Your JSON Here ...." [(ngModel)]="jsonInput" name="jsonInput" rows="10"
+                    cols="50" required></textarea>
+            </div>
+
+        </form>
+
+        <div *ngIf="generatedCode" class="code-container">
+            <div class="code-header">
+                <h3 style="color:white">Generated Code:</h3>
+                <div class="code-actions">
+                    <button (click)="copyCode()">📋 Copy</button>
+                </div>
+            </div>
+
+            <!-- Syntax-highlighted code -->
+            <pre class="code-box"><code class="language-typescript">{{ generatedCode }}</code></pre>
+        </div>
+    </div>
+
+
+
+</div>

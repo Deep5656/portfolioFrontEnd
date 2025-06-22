@@ -10,12 +10,19 @@ import { AdminPanelDashboardComponent } from './components/admin-panel-dashboard
 import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
 import { UpdateProjectComponent } from './components/update-project/update-project.component';
 import { ErrorComponent } from './components/error/error.component';
+import { canActivate } from './guards/auth.guard';
+import { HighChartComponent } from './high-chart/high-chart.component';
 
 const routes: Routes = [
   {
     path:'',
     component:HomeComponent,
     pathMatch:'full'
+  },
+  {
+    path: 'highchart',
+    component: HighChartComponent,
+    pathMatch: 'full'
   },
   {
     path:'about',
@@ -35,6 +42,7 @@ const routes: Routes = [
   {
     path:'admin-dashboard',
     component:AdminDashboardComponent,
+    canActivate: [canActivate],
     children:[
       {
         path:'',

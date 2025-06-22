@@ -16,9 +16,12 @@ import { AdminPanelComponent } from './components/admin-panel/admin-panel.compon
 import { AdminPanelDashboardComponent } from './components/admin-panel-dashboard/admin-panel-dashboard.component';
 import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
 import { UpdateProjectComponent } from './components/update-project/update-project.component';
-// import { UpdateDashComponent } from './components/update-dash/update-dash.component';
 import {LocationStrategy, HashLocationStrategy} from '@angular/common';
 import { ErrorComponent } from './components/error/error.component';
+import { TurncatePipe } from './pipes/turncate.pipe';
+import { NgxUiLoaderHttpModule, NgxUiLoaderModule } from 'ngx-ui-loader';
+import { DialogComponent } from './components/dialog/dialog.component';
+import { HighChartComponent } from './high-chart/high-chart.component';
 
 
 
@@ -36,14 +39,20 @@ import { ErrorComponent } from './components/error/error.component';
     AdminDashboardComponent,
     UpdateProjectComponent,
     ErrorComponent,
-    // UpdateDashComponent
+    TurncatePipe,
+    DialogComponent,
+    HighChartComponent
   ],
   imports: [
     FormsModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    NgxUiLoaderModule,
+    NgxUiLoaderHttpModule.forRoot({
+      showForeground:true,
+    }),
   ],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]

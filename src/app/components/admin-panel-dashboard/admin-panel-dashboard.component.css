@@ -14,10 +14,10 @@
 .card{
     margin:70px;
     box-shadow: 0px 0px 10px cyan;
-    min-height: 400px; 
+    /* height: 100px;  */
 }
 .img{
-    height: 120px;
+    height: 250px;
     width: 150px;
     display: block;
     margin: auto;
@@ -40,10 +40,26 @@
     /* text-align:justify; */
     font-size: 12px;
     line-height: 15px;
+    font-family: monospace;
     /* filter: drop-shadow(2px 2px 0 black); */
 }
 .link{
     text-decoration: none;
     color: black;
 }
+
+
+.no-records {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    margin-top: 75px;
+  }
+  
+  .no-records p {
+    text-align: center;
+    color: #888;
+  }
 

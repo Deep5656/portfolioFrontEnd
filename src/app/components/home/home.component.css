@@ -3,7 +3,6 @@
     position: relative;
     width: 100%;
     justify-content: space-between;
-    height: 100vh;
     background:linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url('../../../assets/OIP.jpg') no-repeat;
     background-size: cover;
     background-position: center;
@@ -11,6 +10,7 @@
     flex-wrap: wrap;
     align-items: center;
     padding: 90px 10% 0;
+    padding-bottom: 10px;
    
 }
 .home-content{
@@ -93,3 +93,79 @@
     }
    
 }
+
+
+
+
+.code-container {
+    background: #1e1e1e;
+    padding: 16px;
+    border-radius: 8px;
+    margin-top: 20px;
+    color: #dcdcdc;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  .code-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .code-actions button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #333;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .code-actions button:hover {
+    background-color: #555;
+  }
+  
+  .code-box {
+    overflow-x: auto;
+    background-color: #2d2d2d;
+    padding: 16px;
+    border-radius: 6px;
+    white-space: pre-wrap;
+    font-size: 14px;
+  }
+
+
+  .form-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    align-items: flex-start;
+  }
+  
+  .left-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .right-column {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  textarea {
+    width: 100%;
+    font-family: monospace;
+  }
+
+  .auto-grow-textarea {
+    width: 100%;
+    overflow: hidden;
+    resize: none;
+    min-height: 30px;
+    font-family: inherit;
+    font-size: 14px;
+  }
