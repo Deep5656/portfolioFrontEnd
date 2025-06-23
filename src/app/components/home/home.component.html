@@ -37,12 +37,12 @@
 
             <div class="left-column">
                 <label style="color:white">Enter Keys (comma-separated):</label>
-                <textarea placeholder="Keys..." [(ngModel)]="keysInput" name="keysInput" rows="1"
+                <textarea placeholder="Keys..." style="padding: 5px;" [(ngModel)]="keysInput" name="keysInput" rows="1"
                     class="auto-grow-textarea" (input)="autoResize($event)" required></textarea>
 
 
                 <label style="color:white">Response Object:</label>
-                <input placeholder="Response Object..." type="text" [(ngModel)]="responseObj" name="responseObj"
+                <input placeholder="Response Object..." style="padding: 5px;" type="text" [(ngModel)]="responseObj" name="responseObj"
                     required />
 
                 <button type="submit">Generate Code</button>
@@ -50,7 +50,7 @@
 
             <div class="right-column">
                 <label style="color: white;">Paste JSON:</label>
-                <textarea placeholder="Paste Your JSON Here ...." [(ngModel)]="jsonInput" name="jsonInput" rows="10"
+                <textarea placeholder="Paste Your JSON Here ...." style="padding: 10px;" [(ngModel)]="jsonInput" name="jsonInput" rows="10"
                     cols="50" required></textarea>
             </div>
 
